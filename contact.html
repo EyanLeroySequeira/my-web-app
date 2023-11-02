@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>ContactPage</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <link rel="stylesheet" href="Home.css"> -->
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body style="background-color:rgb(175, 168, 168,0.3)">
+    <header>
+        <h3 class="logo my-0" id="logo"><big><strong> Contact</strong></big></h3>
+        <nav class="navbar navbar-expand-lg navbar-light"
+            style="border-radius: 5px; background-color: rgb(169, 167, 167,0.3);">
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav ">
+                    <li class="nav-item">
+                        <a class="nav-link" id="home" href="index.html"><strong>Home</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutUs.html"><strong>About Us</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><strong>Contact</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html"><strong>Products</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html"><strong>Cart</strong></a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+
+
+        </nav>
+    </header>
+<div class="container" style="text-align:center;margin-top:30px;margin-bottom: 30px;;">  
+    <h1 >Contact Us</h1>
+</div>
+    
+
+    <div id="contact-card">
+        <div id="contact-info">
+            <h3 id="form-title">Contact Information</h3>
+            <p>Phone: 123-456-7890</p>
+            <p>Email: contact@example.com</p>
+            <p>Address: 123 Main Street, City, Country</p>
+        </div>
+
+        <div id="contact-form">
+            <h3 id="form-title">Contact Form</h3>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required><br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" rows="5" required></textarea><br><br>
+
+                <button type="submit" id="Submit" class="bg-primary">submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Function to handle form submission
+        function submitForm(event) {
+            event.preventDefault(); // Prevent form from submitting normally
+
+            // Get form data
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            // Display a success message
+            var contactForm = document.getElementById("contactForm");
+            contactForm.innerHTML = "<p>Thank you for your message!</p>";
+
+            // You can perform additional actions here, such as sending the form data to a server or displaying a confirmation message
+        }
+
+        // Attach submit event listener to the form
+        var form = document.getElementById("contactForm");
+        form.addEventListener("submit", submitForm);
+    </script>
+
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
+
+<style>
+    h3#logo {
+        background-image: linear-gradient(rgba(4, 1, 1, 0.9), rgba(0, 0, 0, 0.1)), url('ElectroPic.png');
+        background-size: 100%;
+        /* https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Old_Electronics_hero_1.width-1200.format-webp.webp */
+        height: 170px;
+        font-size: 50px;
+        color: rgb(240, 234, 234);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding-top: 40px;
+        text-align: center;
+        display: block;
+        /* border-bottom: 10px solid bisque    ; */
+
+    }
+
+    li.nav-item {
+        border-radius: 3px;
+        margin-right: 20px;
+    }
+
+    #navbarSupportedContent {
+        padding-left: 65%;
+    }
+
+    .nav-link:hover {
+        background-color: rgb(31, 41, 41, 0.3);
+        border-radius: 5px;
+    }
+
+    button.btn.btn-light {
+        box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.6);
+        border-radius: 10px;
+        padding: 20px;
+        background-color: rgba(250, 248, 245, 0.4);
+        color: #333;
+        font-size: 20px;
+        margin-bottom: 15px;
+        /* Add other styles as needed */
+    }
+
+    #contact-card {
+        width: 70vw;
+        margin: auto;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: row;
+        box-sizing: border-box;
+        border-radius: 14px;
+        background-color: aliceblue;
+        height:75vh;
+        margin-bottom: 60px;
+    }
+
+    #contact-info {
+        flex: 1;
+        /* background-image: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXwBFRcXHhoeOyEhO3xTRlN8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fP/AABEIAIIArgMBIgACEQEDEQH/xAAZAAADAQEBAAAAAAAAAAAAAAAAAQIDBAX/xAAvEAEBAAECAwYFAgcAAAAAAAAAARECEhVTkQMEFCExUTJBUmGhQuEFEyIzcZKx/8QAGQEBAQEBAQEAAAAAAAAAAAAAAAECAwUE/8QAHBEBAQACAwEBAAAAAAAAAAAAAAERUQIDExQS/9oADAMBAAIRAxEAPwDxZFSCRpI9J5lpSKkORcjTFqZFSKkVNIxamaPmePZWFTSrP6Z7RtabT2ifpntG1ptG1T9Mto2tdpbQ/TKwtrW6S2ouWW0tuWu0WYRrLC6U2NrEWI1KzsTY0sTYjcokXIWmNJFZtEi5BIuRXO0pFSHIqRXO0pDwqRUis2oweFYPAmUYGGmBhUyzwWGmCwi5Z2Da0xCo1Kyvl6JsaWJsRrLKxNjWxNiNSsrEWNbEWI6SjTGkidMy0kGaci5CipGnO05FSCRUVztEipBIqRWbSweDwMDOSwMKwMBlOCwoBlFicLsKwalZ2FYuxNiNSs7E2NLEWI6Ss7EWNLEVG4enyVGelpEhVxpERcacqqLk90z3VnKsVRwocVimAYgAAEDIE0qpNFiamqpVG4ioq6io3EVnWlLE+aOsZ6WkZaWsqFaRem4ZxcVzq4qJio051UVEynlWao0nkZMFkAAABJp2pqNEmqqaNRNRVVFR0hXyjPVVVFR0idLSMtNXKjVaxcZSrlVyrSKlRKueisWLhpyJVYsWaMmqYUCyQmFFaWSyKdTRaWUXBUqBfIbkRU07U1G4moqqio3GelpKy01crLdjWVcrKVpLMK52NJ5ep7kZPLTNaSnKiVUqsWLGU5GVZwvIynJZDCshORkMCgv8lajUh249EWgrUUqmnU2jcTU1VRUbjkneJPl+VeJk/T+XXf4vNW3PddG6eur1t9Pt9sI1fxSa9V1au76fh26f6vh8se3n8vX7+74fXk9Lx4aYeLkvwXqqd8n0Xqz753nxfedfbbJo3XO2ekYL6808OvTs8dOXep+PnLvVxA9ee0+fr07uITl3qfEZy71cAPbns+br07+IzlXqfEpyr1eeF9ue0+bq09DiWnlXqOJaeVerzwe3PZ83Vp6HEpyr1LiU5V6uAHtz2fN1ad/EZyr1LiE5d6uEJ7c9r83Xp3cQnLvUvHzl3q4ge3PZ8/Xp2eOn0XqV75OXerkX2Xa6uytujb5+udMv/T157X5+vTfxk+j8l4qX9P5LVr1apZe07LzmPLT+w/mWX+72X+v7Hrz2eHDTnADk7AAAAAAAAAAAAAAAAAAAAAAAAAAA/9k="); */
+        height: 100%;
+        background-color:rgba(1, 1, 83, 0.7);
+        background-size: cover;
+        text-align:center;
+        color:aliceblue;
+        font-size:25px;
+        font-family: 'Times New Roman', Times, serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 14px 0px 0px 14px;
+        /* margin-bottom: 500px; */
+    }
+
+    #contact-form {
+        flex: 1;
+        padding-left:20px;
+        padding-top: 30px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    input {
+        width: 80%;
+        padding: 5px 1px;
+        border-radius: 4px;
+        outline: none;
+    }
+
+    textarea {
+        width: 80%;
+    }
+
+    #form-title {
+        margin-bottom: 20px;
+    }
+    label {
+        width: 100%;
+        font-family: 'Times New Roman', Times, serif;
+    }
+   button#Submit{
+    border-radius:5px;
+    width:  100px;
+    border-color: rgb(83, 83, 232);
+    font-size:19px;
+    color:white;
+    outline: 2px solid rgb(16, 158, 246);
+    
+
+   }
+   
+</style>
